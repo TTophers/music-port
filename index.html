@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibey Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-gray-200">
+
+    <!-- Header -->
+    <header class="p-6 border-b border-gray-800 bg-black">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-orange-500">ChrisTOPHer</h1>
+        
+        <!-- Hamburger button (hidden on md+) -->
+        <button id="nav-toggle" class="md:hidden text-orange-500 focus:outline-none" aria-label="Toggle navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+    
+        <!-- Nav links -->
+        <nav id="nav-menu" class="hidden md:flex space-x-6 text-orange-400 text-lg">
+          <a href="#about" class="hover:text-orange-500 transition">About</a>
+          <a href="/mywork.html" class="hover:text-orange-500 transition">My Projects</a>
+          <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
+          <a href="/colab.html" class="hover:text-orange-500 transition">Collaborators</a>
+        </nav>
+      </div>
+    
+      <!-- Mobile menu (shown when toggled) -->
+      <nav id="nav-menu-mobile" class="md:hidden hidden mt-4 space-y-4 text-orange-400 text-lg">
+        <a href="#about" class="block hover:text-orange-500 transition">About</a>
+        <a href="/mywork.html" class="block hover:text-orange-500 transition">My Projects</a>
+        <a href="#contact" class="block hover:text-orange-500 transition">Contact</a>
+        <a href="/colab.html" class="block hover:text-orange-500 transition">Collaborators</a>
+      </nav>
+    </header>
+    
+    <script>
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenuMobile = document.getElementById('nav-menu-mobile');
+    
+      navToggle.addEventListener('click', () => {
+        navMenuMobile.classList.toggle('hidden');
+      });
+    </script>
+    <!-- Hero -->
+    <section class="h-screen flex items-center justify-center text-center px-6 bg-gradient-to-br from-black via-gray-900 to-black">
+      <div>
+        <h2 class="text-5xl font-extrabold text-orange-500 mb-4">Hey, I'm TOPH</h2>
+        <p class="text-gray-400 max-w-xl mx-auto text-lg">
+          A creative web developer and a Self-Produced-Artist - lets lock in and creaate your vibe.
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-6 bg-black">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-orange-400 mb-6">About Me</h3>
+        <p class="text-gray-300 leading-relaxed mb-8">
+          I’m a self-produced artist, engineer, and creative web developer. I mix, master, write, and build — from the soundwaves to the screen. Everything I do is hands-on, crafted with intention and emotion. Whether it’s a track or a landing page, I make sure it feels right.
+    
+          My style blends technical skill with raw creativity. I don’t just follow trends — I create from instinct, pulling from real life, real energy. I’ve taught myself the tools I needed because no one was gonna hand them to me, and I take pride in the fact that every part of my work has my fingerprint on it.
+    
+          If you resonate with authentic sound, clean visuals, and honest storytelling — we’ll work well together. This isn’t about hype. It’s about building something that actually means something.
+    
+          Let’s build your vision. Or sit back, press play, and hear mine.
+        </p>
+    
+       <!-- Social Links -->
+<div class="flex justify-center space-x-6">
+  <!-- Instagram -->
+  <a href="https://instagram.com/yourhandle" target="_blank" aria-label="Instagram" class="transition transform hover:scale-110">
+    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center">
+      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- YouTube -->
+  <a href="https://youtube.com/yourchannel" target="_blank" aria-label="YouTube" class="transition transform hover:scale-110">
+    <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
+      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M10 15l5.19-3L10 9v6zM21.8 7.24a3.03 3.03 0 00-2.14-2.14C17.73 4.5 12 4.5 12 4.5s-5.73 0-7.66.6a3.03 3.03 0 00-2.14 2.14C2 9.17 2 12 2 12s0 2.83.2 4.76a3.03 3.03 0 002.14 2.14C6.27 19.5 12 19.5 12 19.5s5.73 0 7.66-.6a3.03 3.03 0 002.14-2.14c.2-1.93.2-4.76.2-4.76s0-2.83-.2-4.76z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- SoundCloud -->
+  <a href="https://soundcloud.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud" class="transition transform hover:scale-110">
+    <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center">
+      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 15.5a4.5 4.5 0 010-9h.64a6.18 6.18 0 00-1.1 3.13v.3a4.24 4.24 0 00.46 2.29H5zm12.76-1.56a5.76 5.76 0 00-9.98-3.3 4.94 4.94 0 00-3.48.91 3.44 3.44 0 00-1.52 3.02 3.58 3.58 0 002.17 3.28h12.83a3.08 3.08 0 000-6.71z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Spotify -->
+  <a href="https://open.spotify.com/artist/yourid" target="_blank" aria-label="Spotify" class="transition transform hover:scale-110">
+    <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center">
+      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm4.41 14.8a.75.75 0 11-1 .4c-2.72-1.62-6.17-1.97-9.34-1.11a.75.75 0 11-.41-1.44c3.62-.98 7.43-.54 10.28 1.26a.75.75 0 01.47 1.89zM15 12.8a.75.75 0 01-1 0c-2.05-1.23-5.2-1.58-7.63-.89a.75.75 0 11-.44-1.43c3.15-.94 6.92-.54 9.3 1a.75.75 0 01-.23 1.32zM15.42 10a.75.75 0 01-1 0c-1.43-.86-3.8-1.12-5.92-.62a.75.75 0 11-.43-1.43c2.57-.76 5.76-.48 7.96.7a.75.75 0 01-.29 1.35z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Apple Music -->
+  <a href="https://music.apple.com/profile/yourid" target="_blank" aria-label="Apple Music" class="transition transform hover:scale-110">
+    <div class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
+      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16.36 3.62a4.28 4.28 0 00-3.04 1.66 4.22 4.22 0 00-3.96-2.05 4.36 4.36 0 00-4.3 4.26 4.49 4.49 0 002.07 3.74 6.87 6.87 0 00-1.33 4.25 6.78 6.78 0 006.8 6.58c3.43 0 6.29-2.7 6.29-6.02a5.3 5.3 0 00-4.23-5.36 3.96 3.96 0 001.4-3.75z"/>
+      </svg>
+    </div>
+  </a>
+</div>
+
+<!-- Projects Section -->
+<section id="projects" class="mt-16 py-20 bg-gray-950 w-full">
+
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-orange-400 text-center mb-10">My Work</h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      
+      
+      <!-- Project 1 -->
+      <div class="relative bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-orange-500/30 transition group">
+        <h4 class="text-2xl font-semibold text-orange-300 mb-2">Project One</h4>
+        <p class="text-gray-300 mb-4">
+          Built the full front-end for a music portfolio site with smooth scroll, responsive design, and interactive visuals.
+        </p>
+        <div>
+          <p class="text-sm text-gray-400 uppercase tracking-wide mb-1">Collaborators:</p>
+          <ul class="text-gray-400 space-y-1 pl-4 list-disc text-sm">
+            <li><a href="#" class="text-orange-400 hover:underline">@visualbyzen</a> – cover art & graphics</li>
+            <li><a href="#" class="text-orange-400 hover:underline">@beatsbyrae</a> – original score</li>
+          </ul>
+        </div>
+        <audio id="audio1" src="/public/audio/tention.mp3"></audio>
+        <button onclick="toggleAudio('audio1', this)" class="absolute bottom-4 right-4 bg-orange-500 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-orange-400 transition-all">
+          ▶️
+        </button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="relative bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-orange-500/30 transition group">
+        <h4 class="text-2xl font-semibold text-orange-300 mb-2">Project Two</h4>
+        <p class="text-gray-300 mb-4">
+          Designed a Shopify store layout for a streetwear collab drop. Implemented smooth checkout, animations, and SEO.
+        </p>
+        <div>
+          <p class="text-sm text-gray-400 uppercase tracking-wide mb-1">Collaborators:</p>
+          <ul class="text-gray-400 space-y-1 pl-4 list-disc text-sm">
+            <li><a href="#" class="text-orange-400 hover:underline">@threads.n.logic</a> – brand designer</li>
+            <li><a href="#" class="text-orange-400 hover:underline">@itskaiwave</a> – promo visuals</li>
+          </ul>
+        </div>
+        <audio id="audio2" src="/public/audio/healing.wav"></audio>
+        <button onclick="toggleAudio('audio2', this)" class="absolute bottom-4 right-4 bg-orange-500 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-orange-400 transition-all">
+          ▶️
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="collabs" class="py-20 px-6 bg-black">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold text-orange-400 text-center mb-10">Collaborators' Work</h3>
+    <div class="grid md:grid-cols-2 gap-10">
+      
+      <!-- Collaborator 1 -->
+      <div class="relative bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-orange-500/30 transition">
+        <h4 class="text-xl font-semibold text-orange-300 mb-1">@visualbyzen</h4>
+        <p class="text-gray-400 mb-3">Abstract lofi visuals and experimental loops for meditative projects.</p>
+        
+        <!-- Icons -->
+        <div class="flex space-x-4 mb-10">
+          <!-- Website -->
+          <a href="https://visualbyzen.com" target="_blank" rel="noopener noreferrer" aria-label="Visualbyzen website" class="text-orange-400 hover:text-orange-600">
+            <!-- Link icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.5-7.5l-1.5-1.5a5 5 0 0 0-7.5 7.5" />
+              <path d="M14 11a5 5 0 0 0-7.5 7.5l1.5 1.5a5 5 0 0 0 7.5-7.5" />
+            </svg>
+          </a>
+          <!-- SoundCloud -->
+          <a href="https://soundcloud.com/visualbyzen" target="_blank" rel="noopener noreferrer" aria-label="Visualbyzen SoundCloud" class="text-orange-400 hover:text-orange-600">
+            <!-- Music icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13" />
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="16" r="3" />
+            </svg>
+          </a>
+          <!-- Spotify -->
+          <a href="https://open.spotify.com/artist/visualbyzen" target="_blank" rel="noopener noreferrer" aria-label="Visualbyzen Spotify" class="text-orange-400 hover:text-orange-600">
+            <!-- Spotify icon -->
+            <svg role="img" height="24" width="24" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M84 0C37.7 0 0 37.7 0 84c0 46.3 37.7 84 84 84s84-37.7 84-84c0-46.3-37.7-84-84-84zm38.1 120.9c-1.6 2.5-5.1 3.3-7.6 1.7-20.8-13-47-16-77.9-8.7-2.8.7-5.6-1.1-6.3-3.9-.7-2.8 1.1-5.6 3.9-6.3 33.3-8.4 62.7-5 85.7 9.7 2.6 1.6 3.3 5.1 1.7 7.5zm9-20.1c-2 3.1-6.3 4-9.4 2-24-15-60.5-19.4-88.8-10.6-3.5 1-7.2-1-8.2-4.5-1-3.5 1-7.2 4.5-8.2 31.2-8.9 71.2-4 97.8 12.1 3.1 1.9 4 6.2 2 9.2zm1.3-19.2c-27.2-16.2-72.4-17.7-95.4-9.6-4.2 1.3-8.7-1-10-5.2-1.3-4.2 1-8.7 5.2-10 27.8-8.7 77.6-7 107.1 11.1 3.5 2.1 4.7 6.8 2.6 10.3-2.1 3.4-6.7 4.7-10.5 3.4z"/>
+            </svg>
+          </a>
+          <!-- SoundCloud (alternative) -->
+          <a href="https://soundcloud.com/visualbyzen" target="_blank" rel="noopener noreferrer" aria-label="Visualbyzen SoundCloud Alt" class="text-orange-400 hover:text-orange-600">
+            <!-- SoundCloud icon -->
+            <svg role="img" height="24" width="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.944 9.502a5.024 5.024 0 0 0-6.18-3.1A5.998 5.998 0 0 0 6 12a6.002 6.002 0 0 0 0 12h12a5 5 0 0 0 .944-9.498zM16 15v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 2 0zm-3 0v4a1 1 0 0 1-2 0v-4a1 1 0 0 1 2 0zm-3-2v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- MP3 Player -->
+        <audio controls class="absolute bottom-4 right-4 w-10 h-10 opacity-80 hover:opacity-100 transition-all" style="background: none;">
+          <source src="your-track.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+
+      <!-- Collaborator 2 -->
+      <div class="relative bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-orange-500/30 transition">
+        <h4 class="text-xl font-semibold text-orange-300 mb-1">@kaiwave</h4>
+        <p class="text-gray-400 mb-3">Ambient hip hop producer pushing boundary textures and sample flips.</p>
+
+        <!-- Icons -->
+        <div class="flex space-x-4 mb-10">
+          <!-- Website -->
+          <a href="https://kaiwave.com" target="_blank" rel="noopener noreferrer" aria-label="Kaiwave website" class="text-orange-400 hover:text-orange-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.5-7.5l-1.5-1.5a5 5 0 0 0-7.5 7.5" />
+              <path d="M14 11a5 5 0 0 0-7.5 7.5l1.5 1.5a5 5 0 0 0 7.5-7.5" />
+            </svg>
+          </a>
+          <!-- apple music -->
+          <a href="https://soundcloud.com/kaiwave" target="_blank" rel="noopener noreferrer" aria-label="Kaiwave SoundCloud" class="text-orange-400 hover:text-orange-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13" />
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="16" r="3" />
+            </svg>
+          </a>
+          <!-- Spotify -->
+          <a href="https://open.spotify.com/artist/kaiwave" target="_blank" rel="noopener noreferrer" aria-label="Kaiwave Spotify" class="text-orange-400 hover:text-orange-600">
+            <svg role="img" height="24" width="24" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M84 0C37.7 0 0 37.7 0 84c0 46.3 37.7 84 84 84s84-37.7 84-84c0-46.3-37.7-84-84-84zm38.1 120.9c-1.6 2.5-5.1 3.3-7.6 1.7-20.8-13-47-16-77.9-8.7-2.8.7-5.6-1.1-6.3-3.9-.7-2.8 1.1-5.6 3.9-6.3 33.3-8.4 62.7-5 85.7 9.7 2.6 1.6 3.3 5.1 1.7 7.5zm9-20.1c-2 3.1-6.3 4-9.4 2-24-15-60.5-19.4-88.8-10.6-3.5 1-7.2-1-8.2-4.5-1-3.5 1-7.2 4.5-8.2 31.2-8.9 71.2-4 97.8 12.1 3.1 1.9 4 6.2 2 9.2zm1.3-19.2c-27.2-16.2-72.4-17.7-95.4-9.6-4.2 1.3-8.7-1-10-5.2-1.3-4.2 1-8.7 5.2-10 27.8-8.7 77.6-7 107.1 11.1 3.5 2.1 4.7 6.8 2.6 10.3-2.1 3.4-6.7 4.7-10.5 3.4z"/>
+            </svg>
+          </a>
+          <!-- SoundCloud (alternative) -->
+          <a href="https://soundcloud.com/kaiwave" target="_blank" rel="noopener noreferrer" aria-label="Kaiwave SoundCloud Alt" class="text-orange-400 hover:text-orange-600">
+            <svg role="img" height="24" width="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.944 9.502a5.024 5.024 0 0 0-6.18-3.1A5.998 5.998 0 0 0 6 12a6.002 6.002 0 0 0 0 12h12a5 5 0 0 0 .944-9.498zM16 15v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 2 0zm-3 0v4a1 1 0 0 1-2 0v-4a1 1 0 0 1 2 0zm-3-2v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- MP3 Player -->
+        <audio controls class="absolute bottom-4 right-4 w-10 h-10 opacity-80 hover:opacity-100 transition-all" style="background: none;">
+          <source src="another-track.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    
+          <!-- Add more cards below -->
+    
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-6 bg-black text-center max-w-lg mx-auto">
+      <h3 class="text-3xl font-bold text-orange-400 mb-6">Contact Me</h3>
+      <p class="text-gray-300 mb-8">Let's build something dope together.</p>
+    
+      <form id="contact-form" class="flex flex-col gap-6">
+        <label for="email" class="text-left text-orange-400 font-semibold">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="entry.556256672" 
+          required
+          placeholder="you@example.com"
+          class="p-3 rounded bg-gray-800 text-gray-300 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-400"
+        />
+    
+        <label for="message" class="text-left text-orange-400 font-semibold">Message</label>
+        <textarea
+          id="message"
+          name="entry.188903049"
+          required
+          rows="5"
+          placeholder="Tell me what you want..."
+          class="p-3 rounded bg-gray-800 text-gray-300 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-400"
+        ></textarea>
+    
+        <button
+          type="submit"
+          class="bg-orange-500 text-black font-semibold rounded-full py-3 hover:bg-orange-600 transition"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+    
+    <script>
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent normal form submit
+    
+        const formData = new FormData(form);
+        const url = 'https://docs.google.com/forms/d/e/1FAIpQLScvUaESwdzHQtWrsHViIV4-wivooEC-HctmP8IQfUfFiTmNtw/formResponse';
+    
+        fetch(url, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData
+        })
+        .then(() => {
+          // Redirect after submission
+          window.location.href = 'thanks.html';
+        })
+        .catch(() => {
+          // Optionally handle errors
+          alert('Oops, something went wrong. Please try again.');
+        });
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-600 text-sm bg-black border-t border-gray-800">
+      &copy; 2025 YourName. Vibey as ever.
+    </footer>
+    <script>
+      let currentAudio = null;
+      let currentButton = null;
+    
+      function toggleAudio(id, button) {
+        const audio = document.getElementById(id);
+    
+        // Case: same audio is clicked
+        if (audio === currentAudio) {
+          if (!audio.paused) {
+            // Pause it and reset button
+            audio.pause();
+            audio.currentTime = 0;
+            button.innerText = '▶️';
+            currentAudio = null;
+            currentButton = null;
+          } else {
+            // Resume playing
+            audio.play();
+            button.innerText = '⏸️';
+          }
+        } else {
+          // Pause and reset previous
+          if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            if (currentButton) currentButton.innerText = '▶️';
+          }
+    
+          // Set new references
+          currentAudio = audio;
+          currentButton = button;
+    
+          // Play new one
+          audio.play();
+          button.innerText = '⏸️';
+    
+          // When it ends, reset everything
+          audio.onended = () => {
+            button.innerText = '▶️';
+            currentAudio = null;
+            currentButton = null;
+          };
+        }
+      }
+    </script>
+    <script>
+      // Get all audio elements with controls
+      const audios = document.querySelectorAll('audio[controls]');
+    
+      audios.forEach(audio => {
+        audio.addEventListener('play', () => {
+          // Pause all other audios except the one playing now
+          audios.forEach(otherAudio => {
+            if (otherAudio !== audio) {
+              otherAudio.pause();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

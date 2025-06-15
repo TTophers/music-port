@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibey Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-gray-200">
+    <header class="p-4">
+      <a href="/index.html" class="text-orange-400 hover:text-orange-300 font-semibold text-sm sm:text-base transition">
+        ← Back to Home
+      </a>
+    </header>
+    <section class="bg-black py-12 px-6"></section>
+  <h2 class="text-3xl font-bold text-orange-400 mb-8 text-center">My Songs</h2>
+
+  <div class="space-y-6 max-w-3xl mx-auto">
+
+    <!-- Song Card -->
+    <div class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition">
+      <div>
+        <h3 class="text-orange-300 text-xl font-semibold">Tention</h3>
+        <p class="text-gray-400 text-sm">Smooth BoomBap Beat with uplifting melody</p>
+      </div>
+      <audio controls class="w-32 sm:w-40" preload="none">
+        <source src="/public/audio/tention.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Song Card -->
+    <div class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition">
+      <div>
+        <h3 class="text-orange-300 text-xl font-semibold">Healing</h3>
+        <p class="text-gray-400 text-sm">guitar loop with emotinal strings and horns</p>
+      </div>
+      <audio controls class="w-32 sm:w-40" preload="none">
+        <source src="/public/audio/healing.wav" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition">
+      <div>
+        <h3 class="text-orange-300 text-xl font-semibold">Lost InBetwen space</h3>
+        <p class="text-gray-400 text-sm">dark and gritty boombap with spacey vibey feel</p>
+      </div>
+      <audio controls class="w-32 sm:w-40" preload="none">
+        <source src="/public/audio/lost in between.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    
+  </div>
+</section>
+
+</body>
+</html>
