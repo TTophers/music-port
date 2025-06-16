@@ -2,60 +2,146 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vibey Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
       }
+      /* Scroll containers with max height and vertical scroll */
+      .scroll-container {
+        max-height: 600px;
+        overflow-y: auto;
+      }
     </style>
   </head>
-  <body class="bg-black text-gray-200">
+  <body class="bg-black text-gray-200 min-h-screen flex flex-col">
     <header class="p-4">
-      <a href="/index.html" class="text-orange-400 hover:text-orange-300 font-semibold text-sm sm:text-base transition">
-        ← Back to Home
-      </a>
+      <a
+        href="/index.html"
+        class="text-orange-400 hover:text-orange-300 font-semibold text-sm sm:text-base transition"
+        >← Back to Home</a
+      >
     </header>
-    <section class="bg-black py-12 px-6"></section>
-  <h2 class="text-3xl font-bold text-orange-400 mb-8 text-center">My Songs</h2>
 
-  <div class="space-y-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-orange-400 mb-8 text-center">
+      My Songs
+    </h2>
 
-    <!-- Song Card -->
-    <div class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition">
-      <div>
-        <h3 class="text-orange-300 text-xl font-semibold">Tention</h3>
-        <p class="text-gray-400 text-sm">Smooth BoomBap Beat with uplifting melody</p>
-      </div>
-      <audio controls class="w-32 sm:w-40" preload="none">
-        <source src="/audio/tention.mp3" type="audio/mpeg">
-      </audio>
-    </div>
+    <main
+      class="flex flex-col md:flex-row max-w-5xl mx-auto gap-8 px-6 pb-12 flex-grow"
+    >
+      <!-- Beats Section -->
+      <section
+        class="flex-1 scroll-container space-y-6 border-r border-gray-700 pr-6"
+      >
+        <h3 class="text-xl font-semibold text-orange-300 mb-4">Beats</h3>
 
-    <!-- Song Card -->
-    <div class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition">
-      <div>
-        <h3 class="text-orange-300 text-xl font-semibold">Healing</h3>
-        <p class="text-gray-400 text-sm">guitar loop with emotinal strings and horns</p>
-      </div>
-      <audio controls class="w-32 sm:w-40" preload="none">
-        <source src="/audio/healing.wav" type="audio/mpeg">
-      </audio>
-    </div>
+        <!-- Beat Card -->
+        <div
+          class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition"
+        >
+          <div>
+            <h4 class="text-orange-300 text-lg font-semibold">Tention</h4>
+            <p class="text-gray-400 text-sm">
+              Smooth BoomBap Beat with uplifting melody
+            </p>
+          </div>
+          <audio controls class="w-full sm:w-40" preload="none">
+            <source src="/audio/tention.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
 
-    <div class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition">
-      <div>
-        <h3 class="text-orange-300 text-xl font-semibold">Lost InBetwen space</h3>
-        <p class="text-gray-400 text-sm">dark and gritty boombap with spacey vibey feel</p>
-      </div>
-      <audio controls class="w-32 sm:w-40" preload="none">
-        <source src="/audio/lost in between.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-    
-  </div>
-</section>
+        <div
+          class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition"
+        >
+          <div>
+            <h4 class="text-orange-300 text-lg font-semibold">Healing</h4>
+            <p class="text-gray-400 text-sm">
+              Guitar loop with emotional strings and horns
+            </p>
+          </div>
+          <audio controls class="w-full sm:w-40" preload="none">
+            <source src="/audio/healing.wav" type="audio/mpeg" />
+          </audio>
+        </div>
 
-</body>
+        <div
+          class="bg-gray-900 p-5 rounded-xl flex items-center justify-between shadow hover:shadow-orange-500/20 transition"
+        >
+          <div>
+            <h4 class="text-orange-300 text-lg font-semibold">
+              Lost InBetween Space
+            </h4>
+            <p class="text-gray-400 text-sm">
+              Dark and gritty boom bap with spacey vibey feel
+            </p>
+          </div>
+          <audio controls class="w-full sm:w-40" preload="none">
+            <source src="/audio/lost in between.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </section>
+
+      <!-- Full Songs Section -->
+      <section
+        class="flex-1 scroll-container space-y-6 border-l border-gray-700 pl-6 max-h-[600px]"
+      >
+        <h3 class="text-xl font-semibold text-orange-300 mb-4">Full Songs</h3>
+
+        <!-- Full Song Card -->
+        <div
+          class="bg-gray-900 p-5 rounded-xl shadow hover:shadow-orange-500/20 transition"
+        >
+          <h4 class="text-orange-300 text-lg font-semibold">Dreams</h4>
+          <p class="text-gray-400 mb-2">
+            A mellow track blending soulful vocals with smooth beats.
+          </p>
+          <p class="text-gray-400 text-sm mb-4">
+            <strong>Artist:</strong> ChrisTOPHer<br />
+            <strong>Engineer:</strong> Alex Mix<br />
+            <strong>Producer:</strong> Toph
+          </p>
+          <audio controls class="w-full" preload="none">
+            <source src="/audio/dreams.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+
+        <div
+          class="bg-gray-900 p-5 rounded-xl shadow hover:shadow-orange-500/20 transition"
+        >
+          <h4 class="text-orange-300 text-lg font-semibold">Sunset Vibes</h4>
+          <p class="text-gray-400 mb-2">
+            Warm sunset-inspired melody with jazzy undertones.
+          </p>
+          <p class="text-gray-400 text-sm mb-4">
+            <strong>Artist:</strong> Jane Doe<br />
+            <strong>Engineer:</strong> Mike Sound<br />
+            <strong>Producer:</strong> ChrisTOPHer
+          </p>
+          <audio controls class="w-full" preload="none">
+            <source src="/audio/sunset-vibes.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+
+        <div
+          class="bg-gray-900 p-5 rounded-xl shadow hover:shadow-orange-500/20 transition"
+        >
+          <h4 class="text-orange-300 text-lg font-semibold">Midnight Ride</h4>
+          <p class="text-gray-400 mb-2">
+            Energetic beat with driving percussion and synth layers.
+          </p>
+          <p class="text-gray-400 text-sm mb-4">
+            <strong>Artist:</strong> ChrisTOPHer<br />
+            <strong>Engineer:</strong> Sarah Lee<br />
+            <strong>Producer:</strong> Toph
+          </p>
+          <audio controls class="w-full" preload="none">
+            <source src="/audio/midnight-ride.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
